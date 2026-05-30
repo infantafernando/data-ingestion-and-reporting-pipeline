@@ -6,6 +6,8 @@ import requests
 logger = logging.getLogger(__name__)
 
 
+
+
 def fetch_weather_data(api_config: dict) -> Dict[str, Any]:
     params = {
         "latitude": api_config["latitude"],
@@ -14,6 +16,12 @@ def fetch_weather_data(api_config: dict) -> Dict[str, Any]:
         "forecast_days": api_config.get("forecast_days", 3),
         "hourly": ",".join(api_config["hourly"]),
     }
+    logger.info(
+    "Fetching forecast for latitude=%s longitude=%s for %s days",
+    api_config["latitude"],
+    api_config["longitude"],
+    api_config.get("forecast_days", 3),
+)
 
     try:
         logger.info("Calling Open-Meteo API")
