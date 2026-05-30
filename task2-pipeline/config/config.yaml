@@ -1,0 +1,17 @@
+api:
+  base_url: "https://api.open-meteo.com/v1/forecast"
+  latitude: 13.0827
+  longitude: 80.2707
+  timezone: "Asia/Kolkata"
+  forecast_days: 3
+  hourly:
+    - temperature_2m
+    - relative_humidity_2m
+    - precipitation_probability
+    - wind_speed_10m
+
+bigquery:
+  project_id: "YOUR_GCP_PROJECT_ID"
+  dataset_id: "weather_pipeline"
+  table_id: "hourly_forecast"
+  write_disposition: "WRITE_APPEND"
