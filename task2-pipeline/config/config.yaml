@@ -11,7 +11,7 @@ api:
     - wind_speed_10m
 
 bigquery:
-  project_id: "YOUR_GCP_PROJECT_ID"
-  dataset_id: "weather_pipeline"
+  project_id: "bigquery-etl-pipeline-498002"
+  dataset_id: "weather_data"
   table_id: "hourly_forecast"
   write_disposition: "WRITE_APPEND"
