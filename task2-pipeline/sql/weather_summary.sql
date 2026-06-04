@@ -9,6 +9,6 @@ SELECT
   ROUND(AVG(wind_speed_10m), 2) AS avg_wind_speed,
   ROUND(AVG(comfort_score), 2) AS avg_comfort_score,
   COUNT(*) AS hourly_records
-FROM `YOUR_GCP_PROJECT_ID.weather_pipeline.hourly_forecast`
+FROM `bigquery-etl-pipeline-498002.weather_pipeline.hourly_forecast`
 GROUP BY forecast_date
 ORDER BY forecast_date;
